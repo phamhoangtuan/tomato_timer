@@ -52,7 +52,7 @@ class TomatoTimer():
     def start_timer(self):
         info = 'Start Tomato timer with {0} pomodoro phases, ' \
             'each pomodoro phase lasts {1} minutes. ' \
-            'Short break for {2} minutes.' \
+            'Short break for {2} minutes. ' \
             'Long break for {3} minutes.'.format(
                 self.target_pomodoro,
                 self.pomodoro_time,
