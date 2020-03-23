@@ -1,6 +1,8 @@
 import simpleaudio as sa
 import time
 
+SOUND_FILE_NAME = 'sound.wav'
+
 
 class TomatoTimer():
     def __init__(
@@ -16,6 +18,7 @@ class TomatoTimer():
         self.long_break_time = \
             int(long_break_minutes) if long_break_minutes else 10
         self.target_pomodoro = int(target_pomodoro) if target_pomodoro else 10
+        self.wave_obj = sa.WaveObject.from_wave_file(SOUND_FILE_NAME)
 
     def _countdown_and_print_log(self, minutes):
         seconds = minutes * 60
@@ -29,9 +32,7 @@ class TomatoTimer():
 
     def _play_sound(self):
         print('Playing sound')
-        file_name = 'sound.wav'
-        wave_obj = sa.WaveObject.from_wave_file(file_name)
-        play_obj = wave_obj.play()
+        play_obj = self.wave_obj.play()
         play_obj.wait_done()
 
     def start_pomodoro_phase(self):
