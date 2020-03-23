@@ -34,6 +34,7 @@ class TomatoTimer():
         print('Playing sound')
         play_obj = self.wave_obj.play()
         play_obj.wait_done()
+        play_obj.stop()
 
     def start_pomodoro_phase(self):
         print('Start Pomodoro phase')
