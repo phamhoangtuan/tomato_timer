@@ -21,3 +21,8 @@ python main.py
 # Know issues:
 
 - <b>_simpleaudio.SimpleaudioError: Unable to start queue. -- CODE: -66681</b>: Library error that can't play sound more than 4 times. Will investigate more
+
+# TODO:
+
+- Change the print info to be more informative
+- Write more tests
